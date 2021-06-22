@@ -1,9 +1,10 @@
 import '../Styles/App.css';
+import Form from './Form/Form';
 
 function App() {
   return (
     <div className="App">
-      <p>Hello. Let us try and do our best in this project.</p>
+      <Form/>
     </div>
   );
 }
