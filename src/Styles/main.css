@@ -1,0 +1,12 @@
+.main {
+  display: grid;
+  grid-template-columns: 20rem auto;
+}
+.content {
+  grid-column-start: 2;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: #24232c;
+  height: 100vh;
+  width: 300px;
+}
