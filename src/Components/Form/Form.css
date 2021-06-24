@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
-.form-div{
+/* .form-div{
    max-width: 600px;
    margin: 30px auto;
 
-}
+} */
 .calendar-form form{
     margin: 70px;
 }
