@@ -1,17 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import "../Styles/main.css";
+import '../Styles/calendar.css'
 import Sidebar from "./Sidebar";
 import Form from './Form/Form';
+import Calendar from "react-calendar";
 import { Switch, Route } from "react-router-dom";
 
 function Main() {
+  const [value, onChange] = useState(new Date());
   return (
     <div className='main'>
-      <div className='row'>
-        <div className='column sidebar'>
           <Sidebar />
-        </div>
-        <div className='column content'>
           <div className='content'>
             {' '}
             <Switch>
@@ -38,14 +38,13 @@ function Main() {
               </Route>
             </Switch>
           </div>
-        </div>
-        <div className='column calender'>
-          <div className='calendar'>
+          <div className='calendar-form-div'>
+            <div className='calendar-div'>
+              <Calendar className='calendar' onChange={onChange} value={value} />
+            </div>
             <Form />
           </div>
         </div>
-      </div>
-    </div>
   );
 }
 

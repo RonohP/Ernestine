@@ -5,9 +5,6 @@ const Form = () => {
     <div className='form-div'>
       <form className='calendar-form'>
         <div className='row'>
-          <div className='col-25'>
-            <label htmlFor='event'>Event</label>
-          </div>
           <div className='col-75'>
             <input
               type='text'
@@ -19,9 +16,7 @@ const Form = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-25'>
-            <label htmlFor='class'>Select Class</label>
-          </div>
+          
           <div className='col-75'>
             <select className='class' id='class' name='class' required>
               <option value='' disabled selected hidden>
@@ -36,9 +31,7 @@ const Form = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-25'>
-            <label htmlFor='start-date'>Start Date</label>
-          </div>
+          
           <div className='col-75'>
             <input
               type='date'
@@ -54,7 +47,7 @@ const Form = () => {
               required
               className='time'
             />
-            <div className='checkbox'>
+            {/* <div className='checkbox'>
               <input
                 type='checkbox'
                 name='all-day'
@@ -62,13 +55,10 @@ const Form = () => {
                 value='all-day'
               />
               <label htmlFor='all-day'>All day</label>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='row'>
-          <div className='col-25'>
-            <label htmlFor='end-date'>End Date</label>
-          </div>
           <div className='col-75'>
             <input
               type='date'
@@ -87,9 +77,6 @@ const Form = () => {
           </div>
         </div>
         <div className='row'>
-          <div className='col-25'>
-            <label htmlFor='event-desc'>Event Description</label>
-          </div>
           <div className='col-75'>
             <input
               type='text'
