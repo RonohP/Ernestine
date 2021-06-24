@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/main.css";
 import Sidebar from "./Sidebar";
 import { Switch, Route } from "react-router-dom";
+import Schools from "./Schools";
 
 function Main() {
   return (
@@ -16,9 +17,7 @@ function Main() {
             </div>
           </Route>
           <Route exact path="/schools">
-            <div>
-              <h2 style={{ color: "white" }}>This is the schools content</h2>
-            </div>
+            <Schools />
           </Route>
           <Route exact path="/classes">
             <div>
