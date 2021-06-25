@@ -1,8 +1,11 @@
+/* My Body Styling */
 * {
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .App {
   background-color: #24232c;
+  height: 100vh;
 }

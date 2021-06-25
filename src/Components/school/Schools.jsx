@@ -1,5 +1,5 @@
 import React from "react";
-import TableComponent from "../UI/Table";
+import TableComponent from "../../UI/Table";
 
 function Schools() {
   const columns = [

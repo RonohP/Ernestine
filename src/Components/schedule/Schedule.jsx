@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/schedule.css";
-import ScheduleTable from "../UI/ScheduleTable";
+import "./schedule.css";
+import ScheduleTable from "../../UI/ScheduleTable";
 
 function Schedule() {
   const columns = [
