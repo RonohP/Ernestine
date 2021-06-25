@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/sidebar.css";
+import "./sidebar.css";
 import { NavLink } from "react-router-dom";
 import { AiFillSchedule } from "react-icons/ai";
 import { RiDashboardLine } from "react-icons/ri";

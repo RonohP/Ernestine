@@ -1,9 +1,9 @@
 import React from "react";
 import "../Styles/main.css";
-import Sidebar from "./Sidebar";
+import Sidebar from "./layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
-import Schools from "./Schools";
-import Schedule from "./Schedule";
+import Schools from "./school/Schools";
+import Schedule from "./schedule/Schedule";
 
 function Main() {
   return (

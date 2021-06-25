@@ -1,17 +1,27 @@
-<<<<<<< HEAD
-import '../Styles/App.css';
-import Register from '../Components/Register'
-=======
+import "../Styles/App.css";
+import Register from "../Pages/register/Register";
 import "../Styles/App.css";
 import Main from "../Components/Main";
-import { BrowserRouter as Router } from "react-router-dom";
->>>>>>> test
+import Login from "../Pages/login/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      < Register />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Main />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
