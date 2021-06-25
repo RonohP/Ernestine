@@ -43,7 +43,7 @@ function Schools() {
       campus: "Medical Campus",
     },
     {
-      school: "School of Achturial Sciences",
+      school: "School of Archturial Sciences",
       classes: "10",
       campus: "Main Campus",
     },

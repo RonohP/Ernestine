@@ -1,5 +1,5 @@
 import React from "react";
-import "./table.css";
+import "../UI/scheduleTable.css";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -41,8 +41,7 @@ const useStyles = makeStyles({
     fontWeight: 500,
   },
 });
-
-function TableComponent({ columns, rows }) {
+function ScheduleTable({ columns, rows }) {
   const classes = useStyles();
   return (
     <>
@@ -68,10 +67,22 @@ function TableComponent({ columns, rows }) {
                   {row.school}
                 </TableCell>
                 <TableCell className={classes.tableCellBody}>
-                  {row.classes}
+                  {row.class}
                 </TableCell>
                 <TableCell className={classes.tableCellBody}>
-                  {row.campus}
+                  {row.date}
+                </TableCell>
+                <TableCell className={classes.tableCellBody}>
+                  <span
+                    style={{
+                      backgroundColor: "rgba(237, 129, 74, 0.6)",
+                      padding: "5px 20px",
+                      borderRadius: "8px",
+                    }}
+                  >
+                    {" "}
+                    {row.status}
+                  </span>
                 </TableCell>
               </StyledTableRow>
             ))}
@@ -82,4 +93,4 @@ function TableComponent({ columns, rows }) {
   );
 }
 
-export default TableComponent;
+export default ScheduleTable;

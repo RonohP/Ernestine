@@ -48,6 +48,16 @@ function Sidebar() {
           </span>
           Classes
         </NavLink>
+        <NavLink
+          to="/schedule"
+          className="navLink"
+          activeClassName="active-nav-link"
+        >
+          <span className="list-icons">
+            <AiFillSchedule />
+          </span>
+          Schedule
+        </NavLink>
 
         <button className="logout-btn">Logout</button>
       </ul>
