@@ -26,21 +26,41 @@ const Class=()=> {
   const [data] = useState(classList)
   
   const columns =[
-      {title: 'Class', field: 'class'},
+      {title: 'Class', field: 'class' },
       {title: 'School', field: 'school'},
       {title: 'Capacity', field: 'capacity'},
       {title: 'Status', field: 'status', render:(row)=><div className={row.status ? 'Available': 'Booked'}>{row.status ? 'Available': 'Booked'}</div>}
 
   ]
-
+  const options = {
+    headerStyle: {
+        width: "100%",
+        padding: "2.5rem 1rem",
+        backgroundColor: "#1A1820",
+        color: '#FFF',
+        fontSize: "1.3rem",
+        fontWeight: "bold",
+    },
+    cellStyle: {
+        padding: "1.6rem 1rem",
+        fontFamily: "curasive",
+        fontSize: "1.1rem",
+        fontWeight: 500,
+          color: "#1A1820"
+        },
+        rowStyle: {
+            backgroundColor: '#EEE',
+        },
+  
+}
   
     return (
         <div>
-            <MaterialTable title='Material Table'
-            title='Class Data'
+            <MaterialTable 
+            title=''
             data={data}
             columns={columns}
-      
+            options={options}
             />
         </div>
     )
