@@ -3,7 +3,7 @@ import "../Styles/main.css";
 import Sidebar from "./Sidebar";
 import { Switch, Route } from "react-router-dom";
 import Schools from "./Schools";
-import Class from "./Class";
+import Class from "./Class/Class";
 
 
 function Main() {

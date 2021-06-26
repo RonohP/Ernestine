@@ -4,7 +4,7 @@ import MaterialTable from 'material-table';
 import { useState } from 'react';
 
 //styles 
-import '../Styles/Class.css';
+import './Class.css';
 
 
 const classList =[
