@@ -47,7 +47,7 @@ const Form = () => {
               required
               className='time'
             />
-            {/* <div className='checkbox'>
+            <div className='checkbox'>
               <input
                 type='checkbox'
                 name='all-day'
@@ -55,7 +55,7 @@ const Form = () => {
                 value='all-day'
               />
               <label htmlFor='all-day'>All day</label>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className='row'>

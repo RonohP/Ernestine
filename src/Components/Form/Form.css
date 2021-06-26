@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 
-/* .form-div{
-   max-width: 600px;
-   margin: 30px auto;
+.form-div{
+    margin-top: 10px;
+}
 
-} */
 .calendar-form form{
     margin: 70px;
 }
@@ -14,21 +13,22 @@
 .calendar-form input[type='text'], select{
     width: 100%;
     padding: 12px;
-    border-radius: 4px;
+    border-radius: 15px;
     font-weight: bolder;
+}
+
+.calendar-form input[type='text'], select:active, :hover{
+    border: none;
 }
 
 .checkbox{
     display: inline;
     padding: 4px;
 }
-.calendar-form input[type='checkbox']{
-    width: 10%;
-}
-
 .calendar-form label {
-    padding: 12px 12px 12px 0;
+    padding: 12px 10px 12px 5px;
     display: inline-block;
+    color: #b6b9b2;
 }
 .calendar-form input[type='submit']{
     background-color: #FC804A;
@@ -48,12 +48,6 @@
     color: #FC804A;
 }
 
-.calendar-form .col-25{
-    /* float: left; */
-    width: 25%;
-    margin-top: 6px;
-}
-
 .calendar-form .col-75{
     /* float: left; */
     width: 100%;
@@ -70,7 +64,7 @@
 
 .date{
     display: inline;
-    width: 40%;
+    width: 42%;
     padding: 10px;
     border-radius: 4px;
     font-weight: bolder;
@@ -82,7 +76,8 @@
     padding: 12px;
     border-radius: 4px;
     font-weight: bolder;
-    width: 30%;
+    width: 27%;
+    margin-right: 10px;
 }
 /*style the scrollbar*/
 /* width of the scrollbar*/
