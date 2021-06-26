@@ -3,9 +3,9 @@ import "./register.css";
 
 function Register() {
   return (
-    <div class="container">
-      <div class="register">
-        <div class="container">
+    <div className="container">
+      <div className="register">
+        <div className="container">
           <h1>Register</h1>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
@@ -15,28 +15,28 @@ function Register() {
           <p>Or Sign up With</p> <hr />
           <ul>
             <li>
-              <i class="fab fa-facebook-f fa-2x"></i>
+              <i className="fab fa-facebook-f fa-2x"></i>
             </li>
             <li>
-              <i class="fab fa-twitter fa-2x"></i>
+              <i className="fab fa-twitter fa-2x"></i>
             </li>
             <li>
-              <i class="fab fa-github fa-2x"></i>
+              <i className="fab fa-github fa-2x"></i>
             </li>
             <li>
-              <i class="fab fa-linkedin-in fa-2x"></i>
+              <i className="fab fa-linkedin-in fa-2x"></i>
             </li>
           </ul>
-          <span class="copyright"> Ernestine &copy; 2021</span>
+          <span className="copyright"> Ernestine &copy; 2021</span>
         </div>
       </div>
-      <div class="login">
-        <div class="container">
-          <i class="fas fa-user-plus fa-5x"></i>
+      <div className="login">
+        <div className="container">
+          <i className="fas fa-user-plus fa-5x"></i>
           <h2>Welcome</h2>
           <p>Already a member, proceed to login</p>
           <button>
-            Login <i class="fas fa-arrow-circle-right"></i>
+            Login <i className="fas fa-arrow-circle-right"></i>
           </button>
         </div>
       </div>

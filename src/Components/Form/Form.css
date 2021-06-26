@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+.form-div{
+    margin: 20px 15px 0 30px;
+    padding: inherit;
+
+}
+
+.calendar-form form{
+    margin: 70px;
+}
+
+.calendar-form input[type='text'], select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+.calendar-form input[type='text']:hover, select:hover{
+    border: none;
+}
+
+.checkbox{
+    display: inline;
+    padding: 4px;
+}
+.calendar-form label {
+    padding: 12px 10px 12px 5px;
+    display: inline-block;
+    color: #b6b9b2;
+}
+.calendar-form input[type='submit']{
+    background-color: #FC804A;
+    color: #25232C;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 150px;
+    margin-top: 20px
+}
+
+.calendar-form input[type='submit']:hover{
+    background-color: #FC804A;
+    color: #25232C;
+}
+
+.calendar-form .col-75{
+    /* float: left; */
+    width: 100%;
+    margin-top: 6px;
+    bottom:0;
+
+}
+
+.calendar-form .row::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.date{
+    display: inline;
+    width: 44%;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bolder;
+    margin-right: 15px;
+}
+
+.time{
+    display: inline;
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: bolder;
+    width: 27%;
+    margin-right: 10px;
+}
+/*style the scrollbar*/
+/* width of the scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (progress bar) of the scrollbar*/
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #25232C;
+  border-radius: 10px;
+}
+
+/* Handle (the draggable scrolling handle)*/
+::-webkit-scrollbar-thumb {
+  background: #FC804A;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #25232C;
+}
