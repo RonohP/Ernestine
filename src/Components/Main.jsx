@@ -2,18 +2,15 @@ import React, {useState}from "react";
 import "../Styles/main.css";
 import Sidebar from "./layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
-<<<<<<< HEAD
-import Schools from "./Schools";
-import Class from "./Class/Class";
 
-=======
-import Schools from "./school/Schools";
+import Class from "./Class/Class";
+  import Schools from "./school/Schools";
 import Schedule from "./schedule/Schedule";
 import Calendar from "react-calendar";
 import Form from "./Form/Form";
-import Class from './Class';
+
 import "../Styles/calendar.css";
->>>>>>> 972a3fa21562ec522a25e41c93b2508e91a6777d
+
 
 function Main() {
   const [value, onChange] = useState(new Date());

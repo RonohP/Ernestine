@@ -1,8 +1,8 @@
 import React from 'react'
-import MaterialTable from 'material-table';
-//import { Paper, makeStyles  } from '@material-ui/core'
 import { useState } from 'react';
+import MaterialTable from 'material-table';
 
+//import { Paper, makeStyles  } from '@material-ui/core'
 //styles 
 import './Class.css';
 
