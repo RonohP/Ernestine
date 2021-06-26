@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/sidebar.css";
-import {  NavLink } from "react-router-dom";
+import "./sidebar.css";
+import { NavLink } from "react-router-dom";
 import { AiFillSchedule } from "react-icons/ai";
 import { RiDashboardLine } from "react-icons/ri";
 import { IoSchoolSharp, IoBookSharp } from "react-icons/io5";
@@ -47,6 +47,16 @@ function Sidebar() {
             <IoBookSharp />
           </span>
           Classes
+        </NavLink>
+        <NavLink
+          to="/schedule"
+          className="navLink"
+          activeClassName="active-nav-link"
+        >
+          <span className="list-icons">
+            <AiFillSchedule />
+          </span>
+          Schedule
         </NavLink>
 
         <button className="logout-btn">Logout</button>

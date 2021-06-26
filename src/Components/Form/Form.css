@@ -3,7 +3,9 @@
 }
 
 .form-div{
-    margin-top: 10px;
+    margin: 20px 15px 0 30px;
+    padding: inherit;
+
 }
 
 .calendar-form form{
@@ -17,7 +19,7 @@
     font-weight: bolder;
 }
 
-.calendar-form input[type='text'], select:active, :hover{
+.calendar-form input[type='text']:hover, select:hover{
     border: none;
 }
 
@@ -35,17 +37,16 @@
     color: #25232C;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 15px;
     cursor: pointer;
-    float: right;
     font-weight: bolder;
     width: 150px;
     margin-top: 20px
 }
 
 .calendar-form input[type='submit']:hover{
-    background-color: #25232C;
-    color: #FC804A;
+    background-color: #FC804A;
+    color: #25232C;
 }
 
 .calendar-form .col-75{
@@ -64,9 +65,9 @@
 
 .date{
     display: inline;
-    width: 42%;
+    width: 44%;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 15px;
     font-weight: bolder;
     margin-right: 15px;
 }
@@ -74,7 +75,7 @@
 .time{
     display: inline;
     padding: 12px;
-    border-radius: 4px;
+    border-radius: 15px;
     font-weight: bolder;
     width: 27%;
     margin-right: 10px;

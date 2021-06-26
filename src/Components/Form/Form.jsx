@@ -16,7 +16,6 @@ const Form = () => {
           </div>
         </div>
         <div className='row'>
-          
           <div className='col-75'>
             <select className='class' id='class' name='class' required>
               <option value='' disabled selected hidden>
@@ -31,7 +30,6 @@ const Form = () => {
           </div>
         </div>
         <div className='row'>
-          
           <div className='col-75'>
             <input
               type='date'
@@ -86,7 +84,7 @@ const Form = () => {
             />
           </div>
         </div>
-        <div class='row'>
+        <div className='row'>
           <input type='submit' value='SUBMIT' />
         </div>
       </form>

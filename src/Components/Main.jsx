@@ -1,11 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
-import '../Styles/main.css';
-import '../Styles/calendar.css';
-import Sidebar from './Sidebar';
-import Form from './Form/Form';
-import Calendar from 'react-calendar';
-import { Switch, Route } from 'react-router-dom';
+import React, {useState}from "react";
+import "../Styles/main.css";
+import Sidebar from "./layout/Sidebar";
+import { Switch, Route } from "react-router-dom";
+import Schools from "./school/Schools";
+import Schedule from "./schedule/Schedule";
+import Calendar from "react-calendar";
+import Form from "./Form/Form";
+import "../Styles/calendar.css";
 
 function Main() {
   const [value, onChange] = useState(new Date());
@@ -20,15 +21,16 @@ function Main() {
               <h2 style={{ color: 'white' }}>This is the dashboard content</h2>
             </div>
           </Route>
-          <Route exact path='/schools'>
-            <div>
-              <h2 style={{ color: 'white' }}>This is the schools content</h2>
-            </div>
+          <Route exact path="/schools">
+            <Schools />
           </Route>
           <Route exact path='/classes'>
             <div>
               <h2 style={{ color: 'white' }}>This is the classes content</h2>
             </div>
+          </Route>
+          <Route exact path="/schedule">
+            <Schedule />
           </Route>
         </Switch>
       </div>
