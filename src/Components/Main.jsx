@@ -6,6 +6,7 @@ import Schools from "./school/Schools";
 import Schedule from "./schedule/Schedule";
 import Calendar from "react-calendar";
 import Form from "./Form/Form";
+import Class from './Class';
 import "../Styles/calendar.css";
 
 function Main() {
@@ -21,15 +22,13 @@ function Main() {
               <h2 style={{ color: 'white' }}>This is the dashboard content</h2>
             </div>
           </Route>
-          <Route exact path="/schools">
+          <Route exact path='/schools'>
             <Schools />
           </Route>
           <Route exact path='/classes'>
-            <div>
-              <h2 style={{ color: 'white' }}>This is the classes content</h2>
-            </div>
+            <Class />
           </Route>
-          <Route exact path="/schedule">
+          <Route exact path='/schedule'>
             <Schedule />
           </Route>
         </Switch>
