@@ -4,3 +4,8 @@
   margin: 0;
   padding: 0;
 }
+
+.App {
+  /* background-color: #24232c; */
+  height: 100%;
+}

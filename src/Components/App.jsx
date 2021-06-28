@@ -1,3 +1,5 @@
+import '../Styles/App.css';
+// import Form from './Form/Form';
 import "../Styles/App.css";
 import Register from "../Pages/register/Register";
 import "../Styles/App.css";

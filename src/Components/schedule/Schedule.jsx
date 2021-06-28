@@ -16,7 +16,7 @@ function Schedule() {
       class: "Agric Hall 3",
       school: "School of Agriculture",
       date: "Mon 3/06/2021 ",
-      time: " 7.00am -11.00am",
+      time: " 7gi.00am -11.00am",
     },
     {
       Event: "Project presentation",
