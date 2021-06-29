@@ -6,7 +6,7 @@ function Register() {
     <div class="grid-container">
       <div class="grid-item item1">
         <i class="fas fa-user-plus fa-5x"></i>
-        <p style={{ fontSize: "52px" }}>STUDENT HUB</p>
+        {/* <p style={{ fontSize: "52px" }}>LECTURER HUB</p> */}
       </div>
       <div class="grid-item">
         <div class="block">
@@ -14,7 +14,7 @@ function Register() {
         </div>
         <div class="block1">
           <p style={{ fontSize: "16px" }}>Welcome</p>
-          <p>Fill the form to have access to the portal </p>
+          <p>Fill the form to have access to the booking services </p>
         </div>
         <div class="block2">
           Social Networks

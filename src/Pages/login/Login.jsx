@@ -6,7 +6,7 @@ const Login = () => {
     <div class="grid-container">
       <div class="grid-item item1">
         <i class="fas fa-user-plus fa-5x"></i>
-        <p style={{ fontSize: "52px" }}>STUDENT HUB</p>
+        {/* <p style={{ fontSize: "52px" }}>LECTURER HUB</p> */}
       </div>
       <div class="grid-item">
         <div class="block">

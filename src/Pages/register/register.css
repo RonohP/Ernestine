@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /* background: linear-gradient(110deg, #fc804a 40%, #e8eae6 30%); */
+  background: linear-gradient(110deg, #fc804a 40%, #e8eae6 30%);
   font-family: 'Cabin Sketch', cursive;
  }
 
@@ -12,7 +12,7 @@ body {
 
 }
 .item1 {
-  margin-top: 150px; 
+  margin-top: 160px; 
   color: white;
 }
 
@@ -89,6 +89,7 @@ label {
   border: none;
   font-size: 16px;
   background: #282828;
+  color:white;
 }
 
 
