@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-// import useForm from "../../useForm";
-import validate from "../../validateInfo";
+import { useHistory } from "react-router";
+import { toast } from "react-toastify";
 import "./register.css";
 
 function Register() {
+  const [users, setUsers] = useState([]);
+  const history = useHistory();
   const {
     register,
     handleSubmit,
@@ -15,84 +17,19 @@ function Register() {
   password.current = watch("password", "");
   const handleRegister = (data) => {
     console.log(data);
+    const user = {
+      email: data.email,
+      password: data.password,
+      confirmPassword: data.confirmPassword,
+    };
+    setUsers([...users, user]);
+    toast.success("register successful, please login");
+    history.push("/login");
   };
 
+  console.log(users);
+
   return (
-    // <div class="container">
-    //   <div class="register">
-    //     <form class="container" onSubmit={handleSubmit(handleRegister)}>
-    //       <h1>Register</h1>
-    //       <input
-    //         type="email"
-    //         placeholder="email"
-    //         name="email"
-    //         {...register("email", {
-    //           required: "Email is required",
-    //           pattern: {
-    //             value: !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-    //             message: "Enter a valid e-mail address",
-    //           },
-    //         })}
-    //       />
-    //       {errors.email && (
-    //         <p
-    //           style={{
-    //             color: "red",
-    //             fontWeight: "550",
-    //             fontFamily: "cursive",
-    //           }}
-    //         >
-    //           {errors.email.message}
-    //         </p>
-    //       )}
-    //       <input
-    //         type="password"
-    //         name="password"
-    //         placeholder="Password"
-    //         {...register("password", {
-    //           required: "You must specify a password",
-    //           minLength: {
-    //             value: 8,
-    //             message: "Password must have at least 6 characters",
-    //           },
-    //         })}
-    //       />
-    //       {errors.password && (
-    //         <p
-    //           style={{
-    //             color: "red",
-    //             fontWeight: "550",
-    //             fontFamily: "cursive",
-    //           }}
-    //         >
-    //           {errors.password.message}
-    //         </p>
-    //       )}
-    //       <input
-    //         type="password"
-    //         name="confirmPassword"
-    //         placeholder="Confirm Password"
-    //         {...register("confirmPassword", {
-    //           validate: (value) =>
-    //             value === password.current || "The passwords do not match",
-    //         })}
-    //       />
-    //       {errors.confirmPassword && (
-    //         <p
-    //           style={{
-    //             color: "red",
-    //             fontWeight: "550",
-    //             fontFamily: "cursive",
-    //           }}
-    //         >
-    //           {errors.confirmPassword.message}
-    //         </p>
-    //       )}
-    //       <button type="submit">Register</button>
-    //       <hr />
-    //       <p>Or Sign up With</p> <hr />
-    //     </form>
-    //     </div>
     <div class="grid-container">
       <div class="grid-item item1">
         <i class="fas fa-user-plus fa-5x"></i>
@@ -117,7 +54,7 @@ function Register() {
           </a>
         </div>
         <div class="block4">
-          <form onSubmit={handleSubmit(handleRegister)}>
+          <form onSubmit={(e) => e.preventDefault()}>
             <div class="input-container">
               <input
                 className="input-field"
@@ -136,15 +73,7 @@ function Register() {
               <i class="fa fa-envelope icon"></i>
             </div>
             {errors.email && (
-              <p
-                style={{
-                  color: "red",
-                  fontWeight: "550",
-                  fontFamily: "cursive",
-                }}
-              >
-                {errors.email.message}
-              </p>
+              <p className="errorMessage">{errors.email.message}</p>
             )}
             <div class="input-container">
               <input
@@ -156,7 +85,7 @@ function Register() {
                   required: "You must specify a password",
                   minLength: {
                     value: 8,
-                    message: "Password must have at least 6 characters",
+                    message: "Password must have at least 8 characters",
                   },
                 })}
               />
@@ -164,15 +93,7 @@ function Register() {
               <i class="fa fa-key icon"></i>
             </div>
             {errors.password && (
-              <p
-                style={{
-                  color: "red",
-                  fontWeight: "550",
-                  fontFamily: "cursive",
-                }}
-              >
-                {errors.password.message}
-              </p>
+              <p className="errorMessage">{errors.password.message}</p>
             )}
             <div class="input-container">
               <input
@@ -189,15 +110,7 @@ function Register() {
               <i class="fa fa-key icon"></i>
             </div>
             {errors.confirmPassword && (
-              <p
-                style={{
-                  color: "red",
-                  fontWeight: "550",
-                  fontFamily: "cursive",
-                }}
-              >
-                {errors.confirmPassword.message}
-              </p>
+              <p className="errorMessage">{errors.confirmPassword.message}</p>
             )}
             <label>
               <input
@@ -213,7 +126,11 @@ function Register() {
               .
             </label>
             <div class="input-container" style={{ marginLeft: "310px" }}>
-              <button type="submit" class="btn btn1">
+              <button
+                type="submit"
+                class="btn btn1"
+                onClick={handleSubmit(handleRegister)}
+              >
                 Register<i class="fa fa-arrow-right icon1"></i>
               </button>
             </div>
