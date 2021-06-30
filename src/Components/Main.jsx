@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "../Styles/main.css";
 import Sidebar from "./layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
-
 import Class from "./Class/Class";
   import Schools from "./school/Schools";
 import Schedule from "./schedule/Schedule";
 import Calendar from "react-calendar";
 import Form from "./Form/Form";
-import Class from "./Class";
 import "../Styles/calendar.css";
 
 
