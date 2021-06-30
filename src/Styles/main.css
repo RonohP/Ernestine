@@ -18,3 +18,8 @@
   margin-top: 60px;
   margin-left: 60px;
 }
+
+.cards{
+  display: grid;
+  grid-gap: 1em;
+}

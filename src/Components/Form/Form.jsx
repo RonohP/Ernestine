@@ -11,7 +11,7 @@ const Form = (props) => {
   const [eventDesc, setEventDesc] = useState('');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const controls = useMemo(() => (allDay ? ['date'] : ['datetime-local']));
+  const controls = useMemo(() => (allDay ? ['date'] : ['datetime']));
 
   const controlChange = (e) => {
     setAllDay(e.target.checked);
