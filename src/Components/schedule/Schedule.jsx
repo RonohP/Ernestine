@@ -1,72 +1,73 @@
 import React from "react";
 import "./schedule.css";
-import ScheduleTable from "../../UI/ScheduleTable";
+import SimpleCard from "../../UI/Card";
 
 function Schedule() {
-  const columns = [
-    { id: "school", label: "faculty" },
-    { id: "class", label: "class" },
+  const schedules = [
     {
-      id: "date",
-      label: "date",
-    },
-    {
-      id: "status",
-      label: "status",
-    },
-  ];
-
-  const rows = [
-    {
-      school: "School of Medicine",
+      Event: "CAT",
       class: "Med Hall 1",
-      date: "Mon 3/06/2021 @ 8.00am-11.00am",
-      status: "booked",
+      school: "School of Medicine",
+      date: "Mon 3/06/2021 ",
+      time: " 8.00am -11.00am",
     },
     {
-      school: "School of Agriculture",
+      Event: "Main Exam",
       class: "Agric Hall 3",
-      date: "Tues 4/06/2021 @ 11.00am-14.00pm",
-      status: "booked",
+      school: "School of Agriculture",
+      date: "Mon 3/06/2021 ",
+      time: " 7gi.00am -11.00am",
     },
     {
-      school: "School of Computing",
+      Event: "Project presentation",
       class: "Comp lab 1",
-      date: "Wed 5/06/2021 @ 15.00am-18.00pm",
-      status: "booked",
+      school: "School of Computing",
+      date: "Mon 3/06/2021 ",
+      time: " 9.00am -13.00pm",
     },
     {
-      school: "School of Engeneering",
+      Event: "Mechanical Presentation",
       class: "Eng Hall 1",
-      date: "Thur 13/06/2021 @ 8.00am-11.00am",
-      status: "Booked",
+      school: "School of Engeneering",
+      date: "Mon 3/06/2021 ",
+      time: " 11.00am -14.00pm",
     },
     {
-      school: "School of Business",
+      Event: "Lecture",
       class: "Bsn Hall 1",
-      date: "Wed 23/06/2021 @ 8.00am-11.00am",
-      status: "booked",
+      school: "School of Business",
+      date: "Mon 3/06/2021 ",
+      time: " 8.00am -11.00am",
     },
     {
-      school: "School of Nursing",
+      Event: "Wound dressing practical",
       class: "Med Hall 10",
-      date: "Fri 20/06/2021 @ 11.00am-13.00pm",
-      status: "booked",
+      school: "School of Nursing",
+      date: "Mon 3/06/2021 ",
+      time: " 13.00pm -15.00pm",
     },
     {
-      school: "School of Archurial Sciences",
+      Event: "Lecture",
       class: "Eng Hall 4",
-      date: "Mon 22/05/2021 @ 8.00am-11.00am",
-      status: "booked",
+      school: "School of Archurial Sciences",
+      date: "Mon 3/06/2021 ",
+      time: " 10.00am -12.00pm",
     },
     {
-      school: "School of Science",
+      Event: "Practicals",
       class: "Scn Hall 1",
-      date: "Fri 10/05/2021 @ 8.00am-11.00am",
-      status: "booked",
+      school: "School of Science",
+      date: "Mon 3/06/2021 ",
+      time: " 8.00am -11.00am",
     },
   ];
-  return <ScheduleTable columns={columns} rows={rows} />;
+  return (
+    <div className="cardDiv">
+      {schedules.map((schedule) => {
+        return <SimpleCard data={schedule} />;
+      })}
+    </div>
+  );
 }
 
 export default Schedule;

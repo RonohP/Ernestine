@@ -1,4 +1,4 @@
-import React, {useState}from "react";
+import React, { useState } from "react";
 import "../Styles/main.css";
 import Sidebar from "./layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
@@ -8,40 +8,40 @@ import Class from "./Class/Class";
 import Schedule from "./schedule/Schedule";
 import Calendar from "react-calendar";
 import Form from "./Form/Form";
-
+import Class from "./Class";
 import "../Styles/calendar.css";
 
 
 function Main() {
   const [value, onChange] = useState(new Date());
   return (
-    <div className='main'>
+    <div className="main">
       <Sidebar />
-      <div className='content'>
-        {' '}
+      <div className="content">
+        {" "}
         <Switch>
-          <Route path='/dashboard'>
+          <Route path="/dashboard">
             <div>
-              <h2 style={{ color: 'white' }}>This is the dashboard content</h2>
+              <h2 style={{ color: "white" }}>This is the dashboard content</h2>
             </div>
           </Route>
-          <Route exact path='/schools'>
+          <Route exact path="/schools">
             <Schools />
           </Route>
-          <Route exact path='/classes'>
+          <Route exact path="/classes">
             <Class />
           </Route>
-          <Route exact path='/schedule'>
+          <Route exact path="/schedule">
             <Schedule />
           </Route>
         </Switch>
       </div>
       <Switch>
-        <Route path='/dashboard'>
-          <div className='calendar-form-div'>
-            <div className='calendar-div'>
+        <Route path="/dashboard">
+          <div className="calendar-form-div">
+            <div className="calendar-div">
               <Calendar
-                className='calendar'
+                className="calendar"
                 onChange={onChange}
                 value={value}
               />

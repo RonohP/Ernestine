@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router";
+import { toast } from "react-toastify";
 import "./sidebar.css";
 import { NavLink } from "react-router-dom";
 import { AiFillSchedule } from "react-icons/ai";
@@ -6,6 +8,7 @@ import { RiDashboardLine } from "react-icons/ri";
 import { IoSchoolSharp, IoBookSharp } from "react-icons/io5";
 
 function Sidebar() {
+  const history = useHistory();
   return (
     <div className="sidebar">
       <div className="scheduleIcon">
@@ -59,7 +62,15 @@ function Sidebar() {
           Schedule
         </NavLink>
 
-        <button className="logout-btn">Logout</button>
+        <button
+          className="logout-btn"
+          onClick={() => {
+            history.push("/login");
+            toast.success("LogOut Successful");
+          }}
+        >
+          Logout
+        </button>
       </ul>
     </div>
   );
