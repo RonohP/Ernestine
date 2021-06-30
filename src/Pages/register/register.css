@@ -3,7 +3,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: linear-gradient(110deg, #fc804a 40%, #e8eae6 30%);
-  font-family: "Cabin Sketch", cursive;
+  /* font-family: "Cabin Sketch", cursive; */
 }
 
 .block {
@@ -26,13 +26,13 @@ label {
 .block1 {
   color: white;
   height: 350px;
-  font-family: "Cabin Sketch", cursive;
+  font-family: cursive;
 }
 
 .block2 {
   color: white;
   font-size: 15px;
-  font-family: "Cabin Sketch", cursive;
+  font-family: cursive;
   text-align: right;
 }
 .block3 {
@@ -41,7 +41,7 @@ label {
 }
 .block4 {
   height: 330px;
-  font-family: "Cabin Sketch", cursive;
+  font-family: cursive;
 }
 .block5 {
   text-align: left;
@@ -97,7 +97,7 @@ ul li {
 
 .btn,
 p {
-  font-family: "Cabin Sketch", cursive;
+  font-family: cursive;
 }
 
 .btn1 {
