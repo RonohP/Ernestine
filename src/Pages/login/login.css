@@ -10,7 +10,7 @@ body {
   height: 170px;
 }
 .item1 {
-  margin-top: 150px;
+  margin-top: 190px;
   color: white;
 }
 
@@ -78,6 +78,7 @@ label {
   border: none;
   font-size: 16px;
   background: #282828;
+  color: white;
 }
 
 ul {
