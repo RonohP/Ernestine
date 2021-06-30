@@ -31,7 +31,7 @@ const schedules = [
 
 function Main(props) {
   const [value, onChange] = useState(new Date());
-  const [event, setEvent] = useState(schedules);
+  const [eventt, setEvent] = useState(schedules);
 
   console.log(value);
 
@@ -41,7 +41,7 @@ function Main(props) {
 
   const addEvent = (event, eventDesc) =>{
    const newEvent = {Event: event, EventDesc: eventDesc};
-   setEvent([...schedules, newEvent]);
+   setEvent([...eventt, newEvent]);
    }
 
   return (
