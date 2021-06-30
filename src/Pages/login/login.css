@@ -3,58 +3,49 @@ body {
   padding: 0;
   overflow: hidden;
   background: linear-gradient(110deg, #fc804a 40%, #e8eae6 30%);
-  font-family: 'Cabin Sketch', cursive;
- }
+  /* font-family: "Cabin Sketch", cursive; */
+}
 
 .block {
-   
-    height: 170px;
-
+  height: 170px;
 }
 .item1 {
-  margin-top: 190px; 
+  margin-top: 190px;
   color: white;
 }
 
 .dark1 {
-  font-size: 14px; 
+  font-size: 14px;
   color: #fc804a;
   border-radius: 12px;
 }
 label {
-  font-size: 16px; 
+  font-size: 16px;
   color: white;
 }
 .block1 {
-    color: white;
-    height: 350px;
-    font-family: 'Cabin Sketch', cursive;
+  color: white;
+  height: 350px;
+  font-family: cursive;
 }
 
 .block2 {
-    color: white;
-    font-size: 15px;
-    font-family: 'Cabin Sketch', cursive;
-    text-align: right;
+  color: white;
+  font-size: 15px;
+  font-family: cursive;
+  text-align: right;
 }
 .block3 {
-   
-    height: 170px;
-    text-align: right;
-
+  height: 170px;
+  text-align: right;
 }
 .block4 {
-
-    height: 330px;
-    font-family: 'Cabin Sketch', cursive;
-
-
+  height: 330px;
+  font-family: cursive;
 }
 .block5 {
-   text-align: left;
-
+  text-align: left;
 }
-
 
 .input-container {
   display: -ms-flexbox; /* IE10 */
@@ -74,9 +65,8 @@ label {
 }
 
 .icon1 {
-
   font-size: 20px;
-  background:  #fc804a;
+  background: #fc804a;
   color: black;
   min-width: 30px;
 }
@@ -88,9 +78,8 @@ label {
   border: none;
   font-size: 16px;
   background: #282828;
-  color:white;
+  color: white;
 }
-
 
 ul {
   list-style: none;
@@ -102,23 +91,22 @@ ul li {
   color: whitesmoke;
   padding: 10px;
   font-size: 20px;
-  
 }
 
-.btn, p {
-font-family: 'Cabin Sketch', cursive;
+.btn,
+p {
+  font-family: cursive;
 }
 
 .btn1 {
   background: #fc804a;
   color: black;
-  font-size: 14px; 
+  font-size: 14px;
   border-radius: 12px;
-
 }
 .grid-container {
   display: grid;
-  grid-column-gap:  30px;
+  grid-column-gap: 30px;
   grid-template-columns: 200px 300px auto;
   background-color: #303030;
   padding: 10px;
@@ -129,13 +117,22 @@ font-family: 'Cabin Sketch', cursive;
   margin-right: 100px;
   border-radius: 15px;
   border: 3px solid rgba(0, 0, 0, 0.8);
-  
-  
 }
 .grid-item {
-  
   padding: 20px;
   font-size: 30px;
-  
-    /*border: 1px solid rgba(255, 255, 255, 255);*/
+
+  /*border: 1px solid rgba(255, 255, 255, 255);*/
+}
+
+.errorMessage {
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-family: cursive;
+  font-size: 14px;
 }
