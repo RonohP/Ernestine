@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html{
+  background-color: #24232c;
+}
+
 .App {
   background-color: #24232c;
   height: 100%;

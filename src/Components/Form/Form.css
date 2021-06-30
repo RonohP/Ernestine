@@ -3,9 +3,12 @@
 }
 
 .form-div{
-    margin: 20px 15px 0 30px;
+    margin: 20px 10px 0 10px;
     padding: inherit;
+}
 
+.calendar-form{
+    padding: 10px;
 }
 
 .calendar-form form{
@@ -41,7 +44,8 @@
     cursor: pointer;
     font-weight: bolder;
     width: 150px;
-    margin-top: 20px
+    margin-top: 20px;
+    float: right;
 }
 
 .calendar-form input[type='submit']:hover{
@@ -65,11 +69,11 @@
 
 .date{
     display: inline;
-    width: 44%;
-    padding: 10px;
+    width: 49%;
+    padding: 12px 3px;
     border-radius: 15px;
     font-weight: bolder;
-    margin-right: 15px;
+    margin-right: 4px;
 }
 
 .time{
