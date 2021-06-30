@@ -3,7 +3,7 @@ import "../Styles/main.css";
 import Sidebar from "./layout/Sidebar";
 import { Switch, Route } from "react-router-dom";
 import Class from "./Class/Class";
-  import Schools from "./school/Schools";
+import Schools from "./school/Schools";
 import Schedule from "./schedule/Schedule";
 import Calendar from "react-calendar";
 import Form from "./Form/Form";
@@ -17,6 +17,7 @@ const schedules = [
       school: "School of Medicine",
       date: "Mon 3/06/2021 ",
       time: " 8.00am -11.00am",
+      EventDesc: 'Carry your Laptops',
     },
     {
       Event: "Main Exam",
@@ -30,7 +31,7 @@ const schedules = [
 
 function Main(props) {
   const [value, onChange] = useState(new Date());
-  const [event, setEvent] = useState(props.event);
+  const [event, setEvent] = useState(schedules);
 
   console.log(value);
 
@@ -38,9 +39,10 @@ function Main(props) {
   <SimpleCard data={schedule} />
   );
 
-  // const addEvent = (event, class, faculty, allDay,  ) =>{
-
-  // }
+  const addEvent = (event, eventDesc) =>{
+   const newEvent = {Event: event, EventDesc: eventDesc};
+   setEvent([...schedules, newEvent]);
+   }
 
   return (
     <div className='main'>
@@ -73,10 +75,10 @@ function Main(props) {
                 className='calendar'
                 onChange={onChange}
                 value={value}
-                onClickDay={(value) => alert('Clicked day: ', value.toLocaleString())}
+                onClickDay={() => alert('Clicked day: ', value.toLocaleString())}
               />
             </div>
-            <Form />
+            <Form submit={addEvent}/>
           </div>
         </Route>
       </Switch>

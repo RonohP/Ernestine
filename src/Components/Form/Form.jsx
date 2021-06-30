@@ -54,11 +54,11 @@ const Form = (props) => {
               <option defaultValue='' disabled hidden>
                 Select class...
               </option>
-              <option defaultValue='Medical Labs'>Medical Labs</option>
-              <option defaultValue='Agriculture Labs'>Agriculture Labs</option>
-              <option defaultValue='Main Labs'>Main Labs</option>
-              <option defaultValue='Hall A'>Hall A</option>
-              <option defaultValue='Hall B'>Hall B</option>
+              <option value='Medical Labs'>Medical Labs</option>
+              <option value='Agriculture Labs'>Agriculture Labs</option>
+              <option value='Main Labs'>Main Labs</option>
+              <option value='Hall A'>Hall A</option>
+              <option value='Hall B'>Hall B</option>
             </select>
           </div>
         </div>
@@ -74,17 +74,17 @@ const Form = (props) => {
               <option disabled hidden>
                 Select Faculty...
               </option>
-              <option defaultValue='Medicine'>School of Medicine</option>
-              <option defaultValue='Agriculture'>School of Agriculture</option>
-              <option defaultValue='Computing'>School of Computing</option>
-              <option defaultValue='Engineering'>School of Engineering</option>
-              <option defaultValue='Business'>School of Business</option>
-              <option defaultValue='Nursing'>School of Nursing</option>
-              <option defaultValue='Archturial Sciences'>
+              <option value='Medicine'>School of Medicine</option>
+              <option value='Agriculture'>School of Agriculture</option>
+              <option value='Computing'>School of Computing</option>
+              <option value='Engineering'>School of Engineering</option>
+              <option value='Business'>School of Business</option>
+              <option value='Nursing'>School of Nursing</option>
+              <option value='Archturial Sciences'>
                 School of Archturial Sciences
               </option>
-              <option defaultValue='Sciences'>School of Sciences</option>
-              <option defaultValue='Arts'>School of Arts</option>
+              <option value='Sciences'>School of Sciences</option>
+              <option value='Arts'>School of Arts</option>
             </select>
           </div>
         </div>

@@ -36,7 +36,7 @@ const Login = () => {
       </div>
       <div class="grid-item">
         <div class="block3">
-          <a type="button" href="#" class="btn btn1">
+          <a type="button" href="/login" class="btn btn1">
             Sign In
           </a>
         </div>
