@@ -1,122 +1,138 @@
-.register,
-.login {
-  width: 50%;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(110deg, #fc804a 40%, #e8eae6 30%);
+  /* font-family: "Cabin Sketch", cursive; */
 }
 
-.container {
-  width: 100%;
-  margin: auto;
-  padding: 20px;
-  height: 760px;
+.block {
+  height: 170px;
 }
-/*My Register Page Styling*/
-.register {
-  float: left;
-  background-color: white;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
+.item1 {
+  margin-top: 160px;
+  color: white;
+}
+
+.dark1 {
+  font-size: 14px;
+  color: #fc804a;
+  border-radius: 12px;
+}
+label {
+  font-size: 16px;
+  color: white;
+}
+.block1 {
+  color: white;
+  height: 350px;
+  font-family: cursive;
+}
+
+.block2 {
+  color: white;
+  font-size: 15px;
+  font-family: cursive;
+  text-align: right;
+}
+.block3 {
+  height: 170px;
+  text-align: right;
+}
+.block4 {
+  height: 330px;
+  font-family: cursive;
+}
+.block5 {
+  text-align: left;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  font-size: 20px;
+  background: #282828;
+  color: white;
+  min-width: 50px;
   text-align: center;
-  padding-top: 100px;
-}
-.register h1 {
-  margin-bottom: 40px;
-  font-size: 2.5em;
-  color: #bf3d04;
 }
 
-input[type="email"],
-input[type="password"] {
+.icon1 {
+  /*padding: 10px;*/
+  font-size: 20px;
+  background: #fc804a;
+  color: black;
+  min-width: 30px;
+  /*text-align: center;*/
+}
+
+.input-field {
   width: 100%;
   padding: 10px;
-  margin-bottom: 30px;
-  border: none;
-  background-color: #eeeeef;
   outline: none;
-}
-
-.register span {
-  float: left;
-}
-.register a {
-  float: right;
-  text-decoration: none;
-  color: #000;
-  transition: 0.3s all ease-in-out;
-}
-.register a:hover {
-  color: #9526a9;
-  font-weight: bold;
-}
-
-.register button {
-  width: 100%;
-  margin: 30px 0;
-  padding: 10px;
   border: none;
-  border-radius: 10px;
-  background-image: linear-gradient(135deg, #faa078, #bf3d04);
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s all ease-in-out;
+  font-size: 16px;
+  background: #282828;
+  color: white;
 }
 
-.register hr {
-  width: 30%;
-  display: inline-block;
-  margin: 0px 5px 5px;
-}
-
-.register p {
-  display: inline-block;
-  margin: 10px 20px 20px;
-}
-.register ul {
+ul {
   list-style: none;
-  margin-bottom: 30px;
 }
-.register ul li {
+ul li {
+  text-align: left;
   display: inline-block;
-  margin-right: 30px;
-  size: 10px;
   cursor: pointer;
-  color: #bf3d04;
-}
-.register .copyright {
-  display: inline-block;
-  float: none;
-}
-/*Login Sector Styling*/
-.login {
-  float: right;
-  background-image: linear-gradient(90deg, #faa078, #bf3d04);
-  height: 100%;
-  color: #fff;
-  border-radius: 0 10px 10px 0;
-  text-align: center;
-  padding: 100px 0;
-}
-.login h2 {
-  margin: 30px 0;
-  font-size: 50px;
-  letter-spacing: 3px;
-}
-.login p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.login button {
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: #fff;
+  color: whitesmoke;
+  padding: 10px;
   font-size: 20px;
-  text-transform: uppercase;
-  transition: 0.2s all ease-in-out;
 }
-.login button:hover {
-  color: #bf3d04;
-  background-color: #fff;
-  cursor: pointer;
+
+.btn,
+p {
+  font-family: cursive;
+}
+
+.btn1 {
+  background: #fc804a;
+  color: black;
+  font-size: 14px;
+  border-radius: 12px;
+}
+.grid-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 200px 300px auto;
+  background-color: #303030;
+  padding: 10px;
+  width: 1100px;
+  height: 630px;
+  margin-top: 70px;
+  margin-left: 250px;
+  margin-right: 100px;
+  border-radius: 15px;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.errorMessage {
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-family: cursive;
+  font-size: 14px;
 }
