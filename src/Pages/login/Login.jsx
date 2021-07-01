@@ -1,8 +1,8 @@
-import React from "react";
-import { toast } from "react-toastify";
-import { useHistory } from "react-router";
-import { useForm } from "react-hook-form";
-import "./login.css";
+import React from 'react';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router';
+import { useForm } from 'react-hook-form';
+import './login.css';
 
 const Login = () => {
   const history = useHistory();
@@ -13,8 +13,8 @@ const Login = () => {
   } = useForm();
 
   const handleLogin = (userData) => {
-    toast.success("login successful");
-    history.push("/dashboard");
+    toast.success('login successful');
+    history.push('/dashboard');
   };
   return (
     <div className="login-container">
@@ -37,7 +37,7 @@ const Login = () => {
         </div>
         <div class="grid-item">
           <div class="block3">
-            <a type="button" href="#" class="btn btn1">
+            <a type="button" href="/login" class="btn btn1">
               Sign In
             </a>
           </div>

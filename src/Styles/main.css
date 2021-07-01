@@ -20,12 +20,16 @@
   margin-left: 3.75rem;
 }
 
+.cards{
+  display: grid;
+  grid-gap: 1em;
+}
 @media screen and (max-width: 1200px) {
   .main {
     display: flex;
     flex-direction: column;
   }
 
-  .content {
-  }
+  /* .content {
+  } */
 }

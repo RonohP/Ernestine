@@ -58,7 +58,7 @@ function Schools() {
       campus: "Main Campus",
     },
   ];
-  return <TableComponent columns={columns} rows={rows} />;
+  return <TableComponent columns={columns} rows={rows}/>;
 }
 
 export default Schools;
