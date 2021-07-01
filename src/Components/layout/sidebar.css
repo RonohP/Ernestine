@@ -1,0 +1,111 @@
+.sidebar {
+  height: 100%;
+  width: 20rem;
+  position: fixed;
+  z-index: 1;
+  background-color: #1a1820;
+  overflow: auto;
+  border-radius: 15px;
+}
+
+.sidebar-ul {
+  margin-top: 4rem;
+  padding-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scheduleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #b6b9b2;
+  font-size: 1.2rem;
+  padding: 10px 25px 10px 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  list-style: none;
+}
+.navLink:hover {
+  background-color: #ed814a;
+  background-color: #ed814a;
+  color: #1a1820;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.active-nav-link {
+  background-color: #ed814a;
+  color: #1a1820;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.logout-btn {
+  margin-top: 6.25rem;
+  background-color: #b6b9b2;
+  padding: 10px 25px 10px 25px;
+  color: #1a1820;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 6rem;
+}
+
+.list-icons {
+  padding-right: 10px;
+}
+.scheduleIconMobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    border-radius: 0;
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar-ul {
+    display: flex;
+    align-self: center;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    margin: 0;
+    margin-left: 6rem;
+    padding: 0;
+  }
+
+  .logout-btn {
+    margin-top: 0;
+    height: 40px;
+    padding: 0.5rem 0.9rem;
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+  .scheduleIcon {
+    display: none;
+  }
+  .navLink {
+    margin-bottom: 0;
+  }
+  .scheduleIconMobile {
+    display: flex;
+    margin-left: 0.5rem;
+  }
+}
