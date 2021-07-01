@@ -1,26 +1,26 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { BsCircleSquare } from "react-icons/bs";
-import "../UI/card.css";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { BsCircleSquare } from 'react-icons/bs';
+import '../UI/card.css';
 const useStyles = makeStyles({
   root: {
     minWidth: 260,
-    backgroundColor: "#B6B9B2",
+    backgroundColor: '#B6B9B2',
   },
   bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
   },
   title: {
-    fontSize: "1.2rem",
-    color: "#1a1820",
+    fontSize: '1.2rem',
+    color: '#1a1820',
   },
   pos: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 12,
   },
 });
@@ -29,7 +29,7 @@ export default function SimpleCard({ data }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} id={data.id}>
       <CardContent>
         <div className='topDetails'>
           <span className='cardIcon'>

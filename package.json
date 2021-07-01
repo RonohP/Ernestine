@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "classnames": "^2.3.1",
     "material-table": "^1.69.3",
+    "nanoid": "^3.1.23",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
     "react-datepicker": "^4.1.1",

@@ -8,7 +8,11 @@ const Form = (props) => {
   const [end, setEnd] = useState(null);
   const [allDay, setAllDay] = useState(false);
   const [event, setEvent] = useState('');
+  const [room, setRoom] = useState('');
+  const [school, setSchool] = useState('');
   const [eventDesc, setEventDesc] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const controls = useMemo(() => (allDay ? ['date'] : ['datetime']));
@@ -17,10 +21,16 @@ const Form = (props) => {
     setAllDay(e.target.checked);
   };
 
+  // console.log(setStartDate() , setEndDate());
+
   const handleSubmit = (e) =>{
     e.preventDefault();
-    props.submit(event,eventDesc);
+    props.submit(event,school,room,startDate,endDate,eventDesc);
+    setStartDate('');
+    setEndDate('');
     setEventDesc('');
+    setRoom('');
+    setSchool('');
     setEvent('');
 
   }
@@ -49,7 +59,10 @@ const Form = (props) => {
               id='class'
               name='class'
               required
-              defaultValue={'Select class...'}
+              value={room}
+              onChange={(e) => {
+                setRoom(e.target.value);
+              }}
             >
               <option defaultValue='' disabled hidden>
                 Select class...
@@ -69,9 +82,12 @@ const Form = (props) => {
               id='faculty'
               name='faculty'
               required
-              defaultValue={'Select Faculty...'}
+              value={school}
+              onChange={(e) => {
+                setSchool(e.target.value);
+              }}
             >
-              <option disabled hidden>
+              <option disabled defaultValue={'Select Faculty...'}>
                 Select Faculty...
               </option>
               <option value='Medicine'>School of Medicine</option>
@@ -117,6 +133,10 @@ const Form = (props) => {
               required
               className='date'
               placeholder='Event start'
+              value={startDate}
+              // onChange={(e) => {
+              //   setStartDate(e.target.value);
+              // }}
             />
             <input
               ref={setEnd}
@@ -125,6 +145,10 @@ const Form = (props) => {
               required
               className='date'
               placeholder='Event end'
+              value={endDate}
+              // onChange={(e) => {
+              //   setEndDate(e.target.value);
+              // }}
             />
           </div>
         </div>
@@ -134,7 +158,7 @@ const Form = (props) => {
               type='text'
               name='event-desc'
               id='event-desc'
-              placeholder='Event description...'
+              placeholder='Notes, Description, URL... '
               value={eventDesc}
               onChange={(e) => {
                 setEventDesc(e.target.value);
