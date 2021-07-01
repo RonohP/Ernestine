@@ -39,15 +39,15 @@ function Main() {
     <SimpleCard data={schedule} key={schedule.id} />
   ));
 
-  const addEvent = (event, school, room, startDate, endDate, eventDesc) => {
+  const addEvent = (event, school, room, eventDesc) => {
     const newEvent = {
       id: 'event-' + nanoid(),
       Event: event,
       class: room,
       school: school,
-      date: startDate,
-      time: endDate,
       EventDesc: eventDesc,
+      // date: startDate,
+      // time: endDate,
     };
     setEvent([...eventt, newEvent]);
     console.log([...eventt, newEvent]);
@@ -61,7 +61,7 @@ function Main() {
         <Switch>
           <Route path='/dashboard'>
             <div>
-              <h2 style={{ color: 'white' }}>This is the dashboard content</h2>
+              {/* <h2 style={{ color: 'white' }}>This is the dashboard content</h2> */}
               <div className='cards'>{schedule}</div>
             </div>
           </Route>
@@ -84,6 +84,7 @@ function Main() {
                 className='calendar'
                 onChange={onChange}
                 value={value}
+                minDate={new Date()}
               />
             </div>
             <Form submit={addEvent} />

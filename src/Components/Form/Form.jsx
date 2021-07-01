@@ -11,8 +11,8 @@ const Form = (props) => {
   const [room, setRoom] = useState('');
   const [school, setSchool] = useState('');
   const [eventDesc, setEventDesc] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  // const [startDate, setStartDate] = useState(null);
+  // const [endDate, setEndDate] = useState('');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const controls = useMemo(() => (allDay ? ['date'] : ['datetime']));
@@ -21,17 +21,20 @@ const Form = (props) => {
     setAllDay(e.target.checked);
   };
 
+  // const onSelectDate = (e) =>{
+  //   setStartDate(e.value);
+  // }
+
   // console.log(setStartDate() , setEndDate());
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    props.submit(event,school,room,startDate,endDate,eventDesc);
-    setStartDate('');
-    setEndDate('');
+    props.submit(event,school,room,eventDesc);
     setEventDesc('');
     setRoom('');
     setSchool('');
     setEvent('');
+    // setStartDate('');
 
   }
   return (
@@ -124,6 +127,8 @@ const Form = (props) => {
             select='range'
             startInput={start}
             endInput={end}
+            // value={startDate}
+            // onChange={onSelectDate}
           />
           <div className='col-75'>
             <input
@@ -133,10 +138,6 @@ const Form = (props) => {
               required
               className='date'
               placeholder='Event start'
-              value={startDate}
-              // onChange={(e) => {
-              //   setStartDate(e.target.value);
-              // }}
             />
             <input
               ref={setEnd}
@@ -145,10 +146,6 @@ const Form = (props) => {
               required
               className='date'
               placeholder='Event end'
-              value={endDate}
-              // onChange={(e) => {
-              //   setEndDate(e.target.value);
-              // }}
             />
           </div>
         </div>

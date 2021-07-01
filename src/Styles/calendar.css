@@ -143,3 +143,27 @@
   /* margin-left: 10px; */
 }
 
+@media (max-width: 1500px) {
+  .react-calendar {
+    font-size: 8px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .react-calendar {
+    font-size: 7px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .react-calendar {
+    font-size: 6px !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 2500px) {
+  .react-calendar {
+    font-size: 12px !important;
+  }
+}
