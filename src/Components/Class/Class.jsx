@@ -2,6 +2,7 @@ import React from 'react'
 import MaterialTable from 'material-table';
 import { TablePagination } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { nanoid } from 'nanoid';
 
 
 //styles 
@@ -30,16 +31,70 @@ const Class=()=> {
     const classes = useStyles();
     
     const data = [
-        {class: 'Med Hall 1', school: 'Medicine', capacity: 100,  status: 0},
-        {class: 'Agric Hall 3', school: 'Agriculture', capacity: 200, status: 1},
-        {class: 'Med Hall 10', school: 'Nursing', capacity: 100,  status: 0},
-        {class: 'Comp lab 1', school: 'Computing', capacity: 50, status: 1},
-        {class: 'Bsn Hall 1', school: 'Business', capacity: 300, status: 1},
-        {class: 'Eng Hall 1', school: 'Engineering', capacity: 100,  status: 1},
-        {class: 'Scn Hall 1p', school: 'Sciences', capacity: 150,  status: 1},
-        {class: 'Art Hall 4', school: 'Arts', capacity: 300,  status: 1},
-        {class: 'Eng Hall 4', school: 'Achurial Sciences', capacity: 100,  status: 1} 
-    ]
+      {
+        key: nanoid(),
+        class: 'Med Hall 1',
+        school: 'Medicine',
+        capacity: 100,
+        status: 0,
+      },
+      {
+        key: nanoid(),
+        class: 'Agric Hall 3',
+        school: 'Agriculture',
+        capacity: 200,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Med Hall 10',
+        school: 'Nursing',
+        capacity: 100,
+        status: 0,
+      },
+      {
+        key: nanoid(),
+        class: 'Comp lab 1',
+        school: 'Computing',
+        capacity: 50,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Bsn Hall 1',
+        school: 'Business',
+        capacity: 300,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Eng Hall 1',
+        school: 'Engineering',
+        capacity: 100,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Scn Hall 1p',
+        school: 'Sciences',
+        capacity: 150,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Art Hall 4',
+        school: 'Arts',
+        capacity: 300,
+        status: 1,
+      },
+      {
+        key: nanoid(),
+        class: 'Eng Hall 4',
+        school: 'Achurial Sciences',
+        capacity: 100,
+        status: 1,
+      },
+    ];
 
     const columns =[
       {title: 'Class', field: 'class' },

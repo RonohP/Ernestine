@@ -22,7 +22,7 @@ function Sidebar() {
         <AiFillSchedule
           color="#ED814A"
           size="3rem"
-          activeClassName="active-nav-link"
+          activeclassname="active-nav-link"
         />
       </div>
       <ul className="sidebar-ul">
