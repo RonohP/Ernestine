@@ -3,6 +3,7 @@
   grid-template-columns: 20rem auto;
   background-color: #24232c;
 }
+
 .content {
   grid-column-start: 2;
   overflow-x: hidden;
@@ -12,4 +13,14 @@
   width: 90%;
   margin-top: 3.75rem;
   margin-left: 3.75rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+  }
 }
