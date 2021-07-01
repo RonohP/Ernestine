@@ -1,0 +1,23 @@
+.Available {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    background-color: #e6a284;
+    width: fit-content;
+    margin: auto;
+ 
+    border-radius: 3px;
+}
+.Booked {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 12px;
+    background-color: #FC804A;
+    width: fit-content;
+    margin: auto;
+    border-radius: 3px;
+}
