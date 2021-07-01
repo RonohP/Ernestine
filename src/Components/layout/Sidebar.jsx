@@ -18,6 +18,13 @@ function Sidebar() {
           activeClassName="active-nav-link"
         />
       </div>
+      <div className="scheduleIconMobile">
+        <AiFillSchedule
+          color="#ED814A"
+          size="3rem"
+          activeClassName="active-nav-link"
+        />
+      </div>
       <ul className="sidebar-ul">
         <NavLink
           to="/dashboard"
@@ -61,17 +68,16 @@ function Sidebar() {
           </span>
           Schedule
         </NavLink>
-
-        <button
-          className="logout-btn"
-          onClick={() => {
-            history.push("/login");
-            toast.success("LogOut Successful");
-          }}
-        >
-          Logout
-        </button>
       </ul>
+      <button
+        className="logout-btn"
+        onClick={() => {
+          history.push("/login");
+          toast.success("LogOut Successful");
+        }}
+      >
+        Logout
+      </button>
     </div>
   );
 }

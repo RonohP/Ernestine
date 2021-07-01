@@ -19,8 +19,15 @@ function Main() {
         {" "}
         <Switch>
           <Route path="/dashboard">
-            <div>
-              <h2 style={{ color: "white" }}>This is the dashboard content</h2>
+            <div className="calendar-form-div">
+              <div className="calendar-div">
+                <Calendar
+                  className="calendar"
+                  onChange={onChange}
+                  value={value}
+                />
+              </div>
+              <Form />
             </div>
           </Route>
           <Route exact path="/schools">
@@ -34,20 +41,6 @@ function Main() {
           </Route>
         </Switch>
       </div>
-      <Switch>
-        <Route path="/dashboard">
-          <div className="calendar-form-div">
-            <div className="calendar-div">
-              <Calendar
-                className="calendar"
-                onChange={onChange}
-                value={value}
-              />
-            </div>
-            <Form />
-          </div>
-        </Route>
-      </Switch>
     </div>
   );
 }

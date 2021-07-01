@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1;
   background-color: #1a1820;
-  overflow-x: hidden;
+  overflow: auto;
   border-radius: 15px;
 }
 
@@ -62,4 +62,49 @@
 
 .list-icons {
   padding-right: 10px;
+}
+.scheduleIconMobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    border-radius: 0;
+    display: flex;
+    position: relative;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar-ul {
+    display: flex;
+    align-self: center;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    margin: 0;
+    margin-left: 6rem;
+    padding: 0;
+  }
+
+  .logout-btn {
+    margin-top: 0;
+    height: 40px;
+    padding: 0.5rem 0.9rem;
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+  .scheduleIcon {
+    display: none;
+  }
+  .navLink {
+    margin-bottom: 0;
+  }
+  .scheduleIconMobile {
+    display: flex;
+    margin-left: 0.5rem;
+  }
 }
