@@ -39,15 +39,15 @@ function Main() {
     <SimpleCard data={schedule} key={schedule.id} />
   ));
 
-  const addEvent = (event, school, room, eventDesc) => {
+  const addEvent = (event, school, room,eventDesc) => {
     const newEvent = {
       id: 'event-' + nanoid(),
       Event: event,
       class: room,
       school: school,
       EventDesc: eventDesc,
-      // date: startDate,
-      // time: endDate,
+      // date: startDate[0],
+      // time: startDate[1],
     };
     setEvent([...eventt, newEvent]);
     console.log([...eventt, newEvent]);

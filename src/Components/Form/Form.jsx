@@ -2,16 +2,17 @@ import './Form.css';
 import { useState, useMemo } from 'react';
 import { Datepicker } from '@mobiscroll/react';
 import '@mobiscroll/react/dist/css/mobiscroll.min.css';
+import * as moment from 'moment';
 
 const Form = (props) => {
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
   const [allDay, setAllDay] = useState(false);
   const [event, setEvent] = useState('');
-  const [room, setRoom] = useState('');
-  const [school, setSchool] = useState('');
+  const [room, setRoom] = useState('Select class...');
+  const [school, setSchool] = useState('Select Faculty...');
   const [eventDesc, setEventDesc] = useState('');
-  // const [startDate, setStartDate] = useState(null);
+  const [startDate, setStartDate] = useState(moment());
   // const [endDate, setEndDate] = useState('');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,22 +22,22 @@ const Form = (props) => {
     setAllDay(e.target.checked);
   };
 
-  // const onSelectDate = (e) =>{
-  //   setStartDate(e.value);
-  // }
-
-  // console.log(setStartDate() , setEndDate());
+  const onSelectDate = (e) =>{
+    setStartDate(e.value);
+  }
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     props.submit(event,school,room,eventDesc);
     setEventDesc('');
-    setRoom('');
-    setSchool('');
+    setRoom('Select Class...');
+    setSchool('Select Faculty...');
     setEvent('');
     // setStartDate('');
-
   }
+  const now = new Date();
+  const min = now;
+  const max = new Date(now.getFullYear(), now.getMonth() + 6, now.getDate());
   return (
     <div className='form-div'>
       <form className='calendar-form' onSubmit={handleSubmit}>
@@ -67,7 +68,7 @@ const Form = (props) => {
                 setRoom(e.target.value);
               }}
             >
-              <option defaultValue='' disabled hidden>
+              <option disabled hidden value={null}>
                 Select class...
               </option>
               <option value='Medical Labs'>Medical Labs</option>
@@ -90,20 +91,24 @@ const Form = (props) => {
                 setSchool(e.target.value);
               }}
             >
-              <option disabled defaultValue={'Select Faculty...'}>
+              <option disabled hidden value={null}>
                 Select Faculty...
               </option>
-              <option value='Medicine'>School of Medicine</option>
-              <option value='Agriculture'>School of Agriculture</option>
-              <option value='Computing'>School of Computing</option>
-              <option value='Engineering'>School of Engineering</option>
-              <option value='Business'>School of Business</option>
-              <option value='Nursing'>School of Nursing</option>
-              <option value='Archturial Sciences'>
+              <option value='School of Medicine'>School of Medicine</option>
+              <option value='School of Agriculture'>
+                School of Agriculture
+              </option>
+              <option value='School of Computing'>School of Computing</option>
+              <option value='School of Engineering'>
+                School of Engineering
+              </option>
+              <option value='School of Business'>School of Business</option>
+              <option value='School of Nursing'>School of Nursing</option>
+              <option value='School of Archturial Sciences'>
                 School of Archturial Sciences
               </option>
-              <option value='Sciences'>School of Sciences</option>
-              <option value='Arts'>School of Arts</option>
+              <option value='School of Sciences'>School of Sciences</option>
+              <option value='School of Arts'>School of Arts</option>
             </select>
           </div>
         </div>
@@ -127,8 +132,10 @@ const Form = (props) => {
             select='range'
             startInput={start}
             endInput={end}
-            // value={startDate}
-            // onChange={onSelectDate}
+            min={min}
+            max={max}
+            value={startDate}
+            onChange={onSelectDate}
           />
           <div className='col-75'>
             <input
