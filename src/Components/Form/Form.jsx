@@ -12,7 +12,7 @@ const Form = (props) => {
   const [room, setRoom] = useState('Select class...');
   const [school, setSchool] = useState('Select Faculty...');
   const [eventDesc, setEventDesc] = useState('');
-  const [startDate, setStartDate] = useState(moment());
+  const [startDate, setStartDate] = useState(moment().format('MMMM Do YYYY, h:mm:ss a'));
   // const [endDate, setEndDate] = useState('');
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,10 +25,11 @@ const Form = (props) => {
   const onSelectDate = (e) =>{
     setStartDate(e.value);
   }
-
+  
+    // console.log(startDate);
   const handleSubmit = (e) =>{
     e.preventDefault();
-    props.submit(event,school,room,eventDesc);
+    props.submit(event,school,room,startDate,eventDesc);
     setEventDesc('');
     setRoom('Select Class...');
     setSchool('Select Faculty...');

@@ -17,8 +17,8 @@ const schedules = [
     Event: 'CAT',
     class: 'Med Hall 1',
     school: 'School of Medicine',
-    date: 'Mon 3/06/2021 ',
-    time: ' 8.00am -11.00am',
+    start: 'Mon Jun 06 2021 8:00:47 GMT+0300 (East Africa Time)',
+    end: ' Mon Jun 06 2021 11:00:47 GMT+0300 (East Africa Time)',
     EventDesc: 'Carry your Laptops',
   },
   {
@@ -26,8 +26,8 @@ const schedules = [
     Event: 'Main Exam',
     class: 'Agric Hall 3',
     school: 'School of Agriculture',
-    date: 'Mon 3/06/2021 ',
-    time: ' 7.00am -11.00am',
+    start: 'Mon Jun 06 2021 8:00:47 GMT+0300 (East Africa Time)',
+    end: ' Mon Jun 06 2021 11:00:47 GMT+0300 (East Africa Time)',
   },
 ];
 
@@ -39,15 +39,15 @@ function Main() {
     <SimpleCard data={schedule} key={schedule.id} />
   ));
 
-  const addEvent = (event, school, room,eventDesc) => {
+  const addEvent = (event, school, room,startDate,eventDesc) => {
     const newEvent = {
       id: 'event-' + nanoid(),
       Event: event,
       class: room,
       school: school,
       EventDesc: eventDesc,
-      // date: startDate[0],
-      // time: startDate[1],
+      start: startDate[0].toString(),
+      end: startDate[1].toString(),
     };
     setEvent([...eventt, newEvent]);
     console.log([...eventt, newEvent]);

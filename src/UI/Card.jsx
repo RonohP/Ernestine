@@ -62,8 +62,8 @@ export default function SimpleCard({ data }) {
           color='textSecondary'
           style={{ fontWeight: 'bold' }}
         >
-          <span>Date: </span>
-          {data.date}
+          <span> Start: </span>
+          {data.start}
           <br />
         </Typography>
         <Typography
@@ -72,8 +72,8 @@ export default function SimpleCard({ data }) {
           color='textSecondary'
           style={{ fontWeight: 'bold' }}
         >
-          <span>Time: </span>
-          {data.time}
+          <span>End: </span>
+          {data.end}
           <br />
         </Typography>
         <Typography
