@@ -15,14 +15,14 @@ function Sidebar() {
         <AiFillSchedule
           color="#ED814A"
           size="6rem"
-          activeClassName="active-nav-link"
+          activeclassname="active-nav-link"
         />
       </div>
       <div className="scheduleIconMobile">
         <AiFillSchedule
           color="#ED814A"
           size="3rem"
-          activeClassName="active-nav-link"
+          activeclassname="active-nav-link"
         />
       </div>
       <ul className="sidebar-ul">

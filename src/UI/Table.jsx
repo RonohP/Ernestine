@@ -41,11 +41,11 @@ const useStyles = makeStyles({
   },
 });
 
-function TableComponent({ columns, rows }) {
+function TableComponent({ key, columns, rows }) {
   const classes = useStyles();
   return (
     <>
-      <TableContainer style={{ borderRadius: "8px" }}>
+      <TableContainer  id={key} style={{ borderRadius: "8px" }}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead className={classes.tableHead}>
             <TableRow>
