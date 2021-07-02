@@ -138,6 +138,7 @@
   grid-column-start: 3;
   overflow: hidden;
   padding: 10px;
+  margin-bottom: 8rem;
 }
 .calendar-div {
   margin: 10px 0 10px 10px;
